@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.cs_ict.ui.other.MainActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sosas_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/testing"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/ticker_red"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:keepScreenOn="true"
+            android:padding="4dp"
+            android:text="@string/only_for_testing"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblAppVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightOrange"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/darkRed"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <ScrollView
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+
+                <TextView
+                    android:id="@+id/lblMainMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/mainmenu"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/main_menu"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/summary"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@color/dullWhiteOverlay"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_gravity="center_horizontal"
+                            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:drawablePadding="24dp"
+                            android:gravity="center"
+                            android:onClick="@{callback::toggleSummary}"
+                            android:padding="20dp"
+                            android:text="@string/records_summary"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:typeface="monospace" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/recordSummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/summary"
+                        android:minHeight="256dp"
+                        android:padding="20dp"
+                        android:text="@string/records_summary"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:typeface="monospace"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtinstalldate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center"
+                        android:shadowColor="#d6d6d6"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:textColor="#7f7f7f"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/formA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick='@{callback::openForm}'
+                    app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/dullBlack"
+
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:drawableStart="@drawable/open_form"
+                            android:drawablePadding="12dp"
+                            android:text="@string/open_new_form"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!--<androidx.cardview.widget.CardView
+                    android:id="@+id/pendingForms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick='@{callback::openForm}'
+                    app:cardCornerRadius="@dimen/cardview_default_radius">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/redInfo"
+
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginStart="12dp"
+                            android:drawableStart="@drawable/open_form"
+                            android:drawablePadding="12dp"
+                            android:text="@string/check_pending_forms"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>-->
+
+                <LinearLayout
+                    style="@style/hlinearlayout"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formB"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='@{callback::openForm}'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="B"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formC1"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='@{callback::openForm}'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="C1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formC2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='@{callback::openForm}'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="C2"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formCHA"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='@{callback::openForm}'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="CHA"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formCHB"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='@{callback::openForm}'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="CHB"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formCHC"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='@{callback::openForm}'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="CHC"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formCHD"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='@{callback::openForm}'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="CHD"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formCHE"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='@{callback::openForm}'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="CHE"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <!--  <androidx.cardview.widget.CardView
+                          android:id="@+id/uploadData"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                          android:layout_weight="1"
+                          android:clickable="true"
+                          android:foreground="?android:attr/selectableItemBackground"
+                          android:onClick="@{callback::openForm}">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_margin="10dp"
+                              android:padding="12dp">
+
+
+                              <ImageView
+                                  android:layout_width="24dp"
+                                  android:layout_height="24dp"
+                                  android:layout_centerVertical="true"
+                                  android:layout_toStartOf="@id/formText2"
+                                  android:src="@drawable/upload" />
+
+                              <TextView
+                                  android:id="@+id/formText2"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_centerHorizontal="true"
+                                  android:layout_centerVertical="true"
+                                  android:layout_marginStart="10dp"
+                                  android:text="@string/btnUpload"
+                                  android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                  android:textColor="@color/colorPrimaryDark" />
+
+                          </RelativeLayout>
+
+                      </androidx.cardview.widget.CardView>-->
+                    <!--         <Button
+                                 android:id="@+id/takePhoto"
+                                 android:onClick="takePhotos"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="Take Photo"/>-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/databaseBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick="@{callback::openForm}">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@id/formText3"
+                                android:src="@drawable/database" />
+
+                            <TextView
+                                android:id="@+id/formText3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/database"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

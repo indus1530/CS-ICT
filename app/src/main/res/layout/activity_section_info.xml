@@ -1,0 +1,270 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.sections.SectionInfoActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.cs_ict.ui.sections.SectionInfoActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/fldGrpSectionA"
+            style="@style/vlinearlayout">
+
+            <!-- HEAD   -->
+            <TextView
+                style="@style/info"
+                android:text="@string/a101a" />
+
+
+            <!-- Cluster Check   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/checkPSUcv"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <!--hh11-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+
+                        <TextView
+                            android:id="@+id/q_hh11"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_hh11"
+                            android:layout_alignBottom="@id/qtxt_hh11"
+                            android:text="@string/Q_hh11" />
+
+                        <TextView
+                            android:id="@+id/qtxt_hh11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_hh11"
+                            android:text="@string/hh11" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/hh11"
+                            style="@style/EditTextNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/qtxt_hh11"
+                            android:inputType="number"
+                            android:maxLength="9"
+                            android:onTextChanged="@{callback::hh11TextChanged}"
+                            android:textDirection="ltr" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
+
+                            <TextView
+                                android:id="@+id/hh09txt"
+                                style="@null"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:padding="0dp"
+                                android:textSize="28sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/geoarea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:fontFamily="sans-serif"
+                                android:padding="0dp"
+                                android:textColor="@color/gray"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/checkHHBtn2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/outline_btn"
+
+                            android:onClick="@{() -> callback.BtnCheckCluster()}"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:text="CHECK CLUSTER"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/fldGrpSectionA01"
+                style="@style/vlinearlayout"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <!-- HouseHold Check   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hh12cv"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <!--hh12-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom">
+
+
+                            <TextView
+                                android:id="@+id/q_hh12"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_hh12"
+                                android:layout_alignBottom="@id/qtxt_hh12"
+                                android:text="@string/Q_hh12" />
+
+                            <TextView
+                                android:id="@+id/qtxt_hh12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_hh12"
+                                android:text="@string/hh12" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/hh12"
+                                style="@style/EditTextNum"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toEndOf="@id/qtxt_hh12"
+                                android:hint="#-####-###"
+                                android:inputType="textCapCharacters"
+                                android:maxLength="10"
+                                android:onTextChanged="@{callback::hh12TextChanged}"
+                                android:textDirection="ltr" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp">
+
+                                <TextView
+                                    android:id="@+id/hh12msg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:fontFamily="sans-serif"
+
+                                    android:padding="0dp"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/hh12name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:fontFamily="sans-serif"
+                                    android:padding="@null"
+                                    android:textColor="@color/gray"
+                                    android:textSize="20sp"
+                                    android:typeface="sans" />
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/checkHHBtn3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end|center_vertical"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/outline_btn"
+                                android:onClick="@{() -> callback.BtnCheckHH()}"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
+                                android:text="CHECK HOUSEHOLD"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:id="@+id/fldGrpSectionA02"
+                    style="@style/vlinearlayout"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <!--ENDBUTTON linearlayout-->
+                    <LinearLayout
+                        style="@style/hlinearlayout"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="24dp">
+
+                        <Button
+                            android:id="@+id/btnNext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            android:background="@color/colorPrimary"
+                            android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
+                            android:onClick="@{() -> callback.BtnContinue()}"
+                            android:text="@string/nextSection"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

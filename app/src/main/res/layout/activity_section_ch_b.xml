@@ -1,0 +1,451 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.cs_ict.ui.sections.SectionCHBActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/fldGrpSectionCHB"
+            style="@style/linearlayout_view_wt_bound">
+
+
+            <!-- ec20b_title  Title   -->
+            <!-- cb0_title  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVec20b_title"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <TextView
+                        style="@style/info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ec20b_title" />
+
+                    <TextView
+                        style="@style/info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cb0_title" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- cb01  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVcb01"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb01"
+                            android:text="@string/cb01" />
+
+                        <TextView
+                            android:id="@+id/q_cb01"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb01"
+                            android:layout_alignBottom="@id/qtxt_cb01"
+                            android:text="@string/Q_cb01" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/textView3Head"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cb01_info" />
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cb01a" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb01a"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/cb01a"
+                            android:maxLength="2"
+                            app:defaultValue="77"
+                            app:maxValue="20"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cb01b" />
+
+                        <EditText
+                            android:id="@+id/cb01b"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/cb01b"
+                            android:maxLength="2" />
+
+                    </LinearLayout>
+                    <!--
+                                        <CheckBox
+                                            android:id="@+id/cb01dk"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:tag="-1"
+                                            android:text="@string/cb01dk" />-->
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- cb02  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVcb02"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb02"
+                            android:text="@string/cb02" />
+
+                        <TextView
+                            android:id="@+id/q_cb02"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb02"
+                            android:layout_alignBottom="@id/qtxt_cb02"
+                            android:text="@string/Q_cb02" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/textView3Head"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cb02_info" />
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cb02a" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb02a"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+
+                            android:hint="@string/cb02a"
+                            android:maxLength="2"
+
+                            app:defaultValue="77"
+                            app:maxValue="20"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cb02b" />
+
+                        <EditText
+                            android:id="@+id/cb02b"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+
+                            android:hint="@string/cb02b"
+                            android:maxLength="2" />
+
+                    </LinearLayout>
+
+                    <!--  <CheckBox
+                          android:id="@+id/cb02dk"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:tag="-1"
+                          android:text="@string/cb02dk" />-->
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- cb03  (d/m/y)Title   -->
+            <androidx.cardview.widget.CardView style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb03"
+                            android:text="@string/cb03" />
+
+                        <TextView
+                            android:id="@+id/q_cb03"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb03"
+                            android:layout_alignBottom="@id/qtxt_cb03"
+                            android:text="@string/Q_cb03" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fldGrpCVcb03"
+                        style="@style/linearlayout_view_wt_bound"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/textView3Head"
+                                android:text="@string/cb03yy" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/cb03yy"
+                                style="@style/EditTextNum"
+                                android:hint="@string/year"
+                                android:maxLength="4"
+                                android:onTextChanged="@{callback.cb03yyOnTextChanged}"
+                                app:defaultValue="9998"
+                                app:maxValue="2020"
+                                app:minValue="2015"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/textView3Head"
+                                android:text="@string/cb03mm" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/cb03mm"
+                                style="@style/EditTextNum"
+                                android:hint="@string/month"
+                                android:maxLength="2"
+                                app:defaultValue="98"
+                                app:maxValue="12"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/textView3Head"
+                                android:text="@string/cb03dd" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/cb03dd"
+                                style="@style/EditTextNum"
+                                android:hint="@string/days"
+                                android:maxLength="2"
+                                app:defaultValue="98"
+                                app:maxValue="31"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- cb04  (age)Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVcb04"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb04"
+                            android:text="@string/cb04" />
+
+                        <TextView
+                            android:id="@+id/q_cb04"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb04"
+                            android:layout_alignBottom="@id/qtxt_cb04"
+                            android:text="@string/Q_cb04" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        style="@style/linearlayout_view_wt_bound"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/year" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb04yy"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:hint="@string/year"
+                            android:maxLength="2"
+                            app:maxValue="5"
+                            app:minValue="1"
+                            app:type="range" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/month" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb04mm"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:hint="@string/month"
+                            android:maxLength="2"
+                            app:defaultValue="00"
+                            app:maxValue="11"
+                            app:minValue="0"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!--ENDBUTTON linearlayout-->
+            <LinearLayout
+                style="@style/hlinearlayout"
+                android:layout_gravity="start"
+                android:layout_marginTop="24dp">
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@color/grayOverlay"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "edu.aku.hassannaqvi.cs_ict_hh",
+  "variantName": "debug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 2124,
+      "versionName": "2.1",
+      "enabled": true,
+      "outputFile": "cs_ict_2020_10_16_v2124.apk"
+    }
+  ]
+}
