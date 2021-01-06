@@ -61,7 +61,7 @@
     <string name="tnheading"> SECTION N: WATER AND SANITATION </string>
     <string name="toheading"> SECTION O: HANDWASHING </string>
     <string name="total"> Total </string>
-    <string name="under1_2"> Child 12-23 Months </string>
+    <string name="under1_2"> Child 04-11 Months </string>
     <string name="under5"> Child Under 5 </string>
     <string name="a101"> کلسٹر نمبر </string>
     <string name="a101a"> یہ معلومات ضلعی بنیاد پر بنائی گئی گاؤں کی فہرست پر مبنی ہوں گی۔ ہر انٹرویو کرنے والے کو جس علاقے کا وہ دورہ کرے گا کلسٹرز کی ایک فہرست دی جائے گی اور انٹرویو شروع کرنے سے پہلے اسی فہرست سے یہ معلومات درج کی جائیں گی۔ </string>
@@ -101,11 +101,11 @@
     <string name="hh19a"> افراد کی تعداد: </string>
     <string name="hh19b"> اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے </string>
     <string name="hh19_info"> اگر اس گھرانے میں افراد کی تعداد95 یا اس سے زیادہ ہےتو95 ریکارڈ کرینگے۔ نوٹ: وہ افراد جو اس گھر میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا کھاتے ہیں۔ </string>
-    <string name="hh20"> کیا اس گھرانے میں کوئی12سے23 مہینے کی عمر کا بچہ موجود ہے؟ </string>
+    <string name="hh20"> کیا اس گھرانے میں کوئی 04 سے11 مہینے کی عمر کا بچہ موجود ہے؟ </string>
     <string name="hh20_info"> یعنی، وہ بچے جو اپنی پہلی سالگرہ پر پہنچ چکے ہیں، لیکن دوسری سالگرہ منانے والے شامل نہیں ہیں </string>
     <string name="hh20a"> ہاں </string>
     <string name="hh20b"> نہیں </string>
-    <string name="hh20aa"> اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
+    <string name="hh20aa"> اگر ہاں، تو 04–11 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
     <string name="hh22"> گھرانے کے انٹرویو کا نتیجہ: </string>
     <string name="hh22h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
     <string name="hh22a"> مکمل </string>
@@ -571,7 +571,7 @@
     <string name="ec22b"> جزوی طور پر مکمل </string>
     <string name="ec22c"> انکار کردیا </string>
     <string name="ec22d"> ماں/بچے کی دیکھ بھال کرنے والا/والی گھر پر موجود نہیں </string>
-    <string name="ec22e"> بچہ اہل نہیں / بچے کی عمر 12 سے 23 مہینے نہیں ہے- </string>
+    <string name="ec22e"> بچہ اہل نہیں / بچے کی عمر 04 سے 11 مہینے نہیں ہے- </string>
     <string name="ec22f"> جواب دینے سے قاصر یا معذور </string>
     <string name="ec2296"> دیگر وضاحت کریں </string>
 
